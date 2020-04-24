@@ -7,6 +7,9 @@ const timestamp = document.getElementById("timestamp");
 // Play and pause video
 function toggleVideoStatus() {
   if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
   }
 }
 
@@ -34,11 +37,10 @@ function stopVideo() {
 video.addEventListener("click", toggleVideoStatus);
 video.addEventListener("pause", updatePlayIcon);
 video.addEventListener("play", updatePlayIcon);
-video.addEventListener("timeupdate", toggleVideoStatus);
-video.addEventListener("click", updateProgress);
+video.addEventListener("timeupdate", updateProgress);
 
 play.addEventListener("click", toggleVideoStatus);
 
 stop.addEventListener("click", stopVideo);
 
-progress.addEventListener("click", setVideoProgress);
+progress.addEventListener("change", setVideoProgress);
