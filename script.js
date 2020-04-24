@@ -1,0 +1,44 @@
+const video = document.getElementById("video");
+const play = document.getElementById("play");
+const stop = document.getElementById("stop");
+const progress = document.getElementById("progress");
+const timestamp = document.getElementById("timestamp");
+
+// Play and pause video
+function toggleVideoStatus() {
+  if (video.paused) {
+  }
+}
+
+// Update play/pause icon
+function updatePlayIcon() {
+  return true;
+}
+
+// Update progress & timestamp
+function updateProgress() {
+  return true;
+}
+
+// Set video time to progress
+function setVideoProgress() {
+  return true;
+}
+
+// Stop video
+function stopVideo() {
+  return true;
+}
+
+// Event Listeners
+video.addEventListener("click", toggleVideoStatus);
+video.addEventListener("pause", updatePlayIcon);
+video.addEventListener("play", updatePlayIcon);
+video.addEventListener("timeupdate", toggleVideoStatus);
+video.addEventListener("click", updateProgress);
+
+play.addEventListener("click", toggleVideoStatus);
+
+stop.addEventListener("click", stopVideo);
+
+progress.addEventListener("click", setVideoProgress);
